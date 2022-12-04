@@ -39,16 +39,31 @@ public class Movie_page extends HttpServlet {
 			e.printStackTrace();
 		}
 		ArrayList<Movie> movie_data;
-		try {
-			movie_data = Data.Movie_Data();
-			request.setAttribute("list", movie_data);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("web_project/movie.jsp");
-			dispatcher.forward(request,response);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			System.out.print("error");
+		String title =request.getParameter("title");
+		if (title == null) {
+			try {
+				movie_data = Data.Movie_Data();
+				request.setAttribute("list", movie_data);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				System.out.print("error");
+			}
 		}
+		else {
+			try {
+				System.out.println(title);
+				movie_data = Data.Movie_Data(title);
+				request.setAttribute("list", movie_data);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				System.out.print("error");
+			}
+		}
+
+		RequestDispatcher dispatcher = request.getRequestDispatcher("web_project/movie.jsp");
+		dispatcher.forward(request,response);
 	}
 
 	/**

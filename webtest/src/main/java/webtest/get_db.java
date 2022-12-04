@@ -22,7 +22,7 @@ public class get_db {
 	public get_db() throws SQLException{
 		final String USERNAME = "root";//DBMS접속 시 아이디
 		final String URL = "jdbc:mysql://localhost:3306/tgv_db";//DBMS접속할 db명
-		final String PASSWORD = "1234";//DBMS접속 시 비밀번호
+		final String PASSWORD = "qhw12522";//DBMS접속 시 비밀번호
         try {
             System.out.println("생성자");
             Class.forName("com.mysql.jdbc.Driver");
@@ -51,6 +51,34 @@ public class get_db {
             String info = rs_movie.getString("info");
             String director = rs_movie.getString("director");
             String genre = rs_movie.getString("genre"); //rs.getString("email");
+            Movie temp = new Movie(id, title, info, director, genre);
+            movie_list.add(temp);
+        }
+		return movie_list;
+	}
+	
+	public ArrayList<Movie> Movie_Data(String search_title) throws SQLException {
+		ArrayList<Movie> movie_list = new ArrayList<Movie>();
+        String sql_movie_select = "select * from movie where title like "+"'%"+search_title+"%'";
+        pstmt = this.conn.prepareStatement(sql_movie_select);
+        rs_movie = pstmt.executeQuery(sql_movie_select);
+        while (rs_movie.next()) {
+        	
+            int id = rs_movie.getInt("id");
+            String title = rs_movie.getString("title");
+            String info = rs_movie.getString("info");
+            String director = rs_movie.getString("director");
+            String genre = rs_movie.getString("genre"); //rs.getString("email");
+            Movie temp = new Movie(id, title, info, director, genre);
+            movie_list.add(temp);
+        }
+        
+        while (movie_list.size() < 3) {
+        	int id = 5;
+        	String title = "결과 없음";
+        	String info = "";
+            String director = "";
+            String genre = "";
             Movie temp = new Movie(id, title, info, director, genre);
             movie_list.add(temp);
         }
