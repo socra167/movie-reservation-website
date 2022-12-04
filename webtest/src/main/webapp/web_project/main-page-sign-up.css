@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+.mainbox-div {
+  position: absolute;
+  top: 171px;
+  left: 554px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-white);
+  width: 812px;
+  height: 739px;
+}
+.tgv-logo-icon12 {
+  position: absolute;
+  top: 221px;
+  left: 872px;
+  width: 176px;
+  height: 88px;
+  object-fit: cover;
+}
+.card-backgroundsimple-div1 {
+  position: absolute;
+  top: 438px;
+  left: 694px;
+  border-radius: var(--br-lg);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-900);
+  box-sizing: border-box;
+  width: 532px;
+  height: 393px;
+}
+.group-label-div2 {
+  position: absolute;
+  top: 475px;
+  left: 718px;
+  display: inline-block;
+}
+.inputbase-div2 {
+  position: absolute;
+  height: calc(100% + 2px);
+  width: calc(100% + 2px);
+  top: -2px;
+  right: 0;
+  bottom: 0;
+  left: -2px;
+  border-radius: var(--br-2xs);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  box-sizing: border-box;
+}
+.text-state-div2 {
+  position: absolute;
+  top: calc(50% - 12.5px);
+  left: 12.5px;
+  display: inline-block;
+}
+.forminputtextdefault-div2 {
+  position: absolute;
+  bottom: 536px;
+  left: 718px;
+  width: 486px;
+  height: 38px;
+  color: var(--color-gray-500);
+}
+.group-label-div3,
+.group-label-div4 {
+  position: absolute;
+  top: 572px;
+  left: 718px;
+  display: inline-block;
+}
+.group-label-div4 {
+  top: 661px;
+  left: 717px;
+}
+.forminputtextdefault-div3,
+.forminputtextdefault-div4 {
+  position: absolute;
+  bottom: 439px;
+  left: 718px;
+  width: 486px;
+  height: 38px;
+  color: var(--color-gray-500);
+}
+.forminputtextdefault-div4 {
+  bottom: 350px;
+  left: 717px;
+}
+.base-div {
+  position: absolute;
+  top: 763px;
+  left: 718px;
+  border-radius: var(--br-xs);
+  background-color: var(--color-gray-600);
+  width: 111px;
+  height: 41px;
+}
+.sign-up-div {
+  top: 773px;
+  left: 739px;
+  font-size: var(--font-size-lg);
+  font-family: var(--font-helvetica-neue);
+  color: var(--color-white);
+  cursor: pointer;
+}
+.sign-up-div,
+.tgv-b16,
+.tu-golden-village12 {
+  position: absolute;
+  display: inline-block;
+}
+.tgv-b16 {
+  top: 0;
+  left: calc(50% - 35px);
+}
+.tu-golden-village12 {
+  bottom: 0;
+  left: 0;
+  font-size: var(--font-size-lg);
+}
+.div288 {
+  position: absolute;
+  top: 319px;
+  left: 881px;
+  width: 158px;
+  height: 74px;
+  font-size: var(--font-size-2xl);
+  color: var(--color-gray-1000);
+  font-family: var(--font-roboto);
+}
+.color-icon25 {
+  position: absolute;
+  height: calc(100% - 2px);
+  width: calc(100% - 2px);
+  top: 2px;
+  right: 0;
+  bottom: 0;
+  left: 2px;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.iconactioncheck-circle-outli-div {
+  position: absolute;
+  top: 479px;
+  left: 1176px;
+  width: 20px;
+  height: 20px;
+}
+.mainpage-sign-up-div {
+  position: relative;
+  background-color: var(--color-gray-800);
+  width: 100%;
+  height: 1080px;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-1100);
+  font-family: var(--font-helveticaneue);
+}

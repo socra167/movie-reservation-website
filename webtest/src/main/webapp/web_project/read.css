@@ -1,0 +1,279 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+.div17 {
+  position: absolute;
+  top: calc(50% - 8.5px);
+  right: 15px;
+  display: inline-block;
+}
+.color-icon4 {
+  position: absolute;
+  height: calc(100% - 6px);
+  width: calc(100% - 6px);
+  top: 3px;
+  right: 3px;
+  bottom: 3px;
+  left: 3px;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.iconcontentcreate-24px-div1 {
+  position: absolute;
+  top: calc(50% - 11.5px);
+  left: 16px;
+  width: 24px;
+  height: 24px;
+}
+.div16 {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-sm);
+  background-color: var(--color-white);
+}
+.div15,
+.div19,
+.div20 {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  width: 107px;
+  height: 41px;
+}
+.div19,
+.div20 {
+  width: 100%;
+  right: 0;
+  left: 0;
+  border-radius: var(--br-lg) var(--br-lg) 0 0;
+  background-color: var(--color-gray-100);
+  height: 53px;
+}
+.div19 {
+  height: 100%;
+  bottom: 0;
+  border-radius: var(--br-lg);
+  background-color: var(--color-white);
+}
+.p {
+  margin: 0;
+}
+.div23 {
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+}
+.b,
+.div22,
+.div23 {
+  position: absolute;
+}
+.b {
+  top: 0;
+  left: 0;
+  font-size: var(--font-size-base);
+  display: inline-block;
+}
+.div22 {
+  bottom: 0;
+  left: 9px;
+  width: 1202px;
+  height: 267px;
+}
+.b1,
+.div25 {
+  position: absolute;
+  display: inline-block;
+}
+.div25 {
+  bottom: 4.47px;
+  left: 77px;
+}
+.b1 {
+  bottom: 3.47px;
+  left: calc(50% + 284.5px);
+}
+.b1,
+.b2,
+.category-b,
+.title-b {
+  color: var(--color-gray-1100);
+}
+.b2 {
+  position: absolute;
+  right: 182px;
+  bottom: 2.47px;
+  display: inline-block;
+}
+.category-b,
+.title-b {
+  bottom: 4.47px;
+}
+.title-b {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+}
+.category-b {
+  left: calc(50% - 488.5px);
+}
+.category-b,
+.div26,
+.div27,
+.user1-div {
+  position: absolute;
+  display: inline-block;
+}
+.div26 {
+  bottom: 4.47px;
+  left: calc(50% - 379.5px);
+}
+.div27,
+.user1-div {
+  bottom: 3.47px;
+}
+.user1-div {
+  left: calc(50% + 370.5px);
+}
+.div27 {
+  right: 68px;
+}
+.color-icon5 {
+  position: absolute;
+  height: calc(100% - 11.31px);
+  width: calc(100% - 11.31px);
+  top: 6.36px;
+  right: 6.36px;
+  bottom: 4.95px;
+  left: 4.95px;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.div28 {
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 33.94px;
+}
+.div21,
+.div24,
+.div28 {
+  position: absolute;
+}
+.div24 {
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 33.94px;
+  font-size: var(--font-size-base);
+}
+.div21 {
+  width: calc(100% - 65px);
+  top: 9.53px;
+  right: 18px;
+  left: 47px;
+  height: 366.47px;
+}
+.div14,
+.div18 {
+  position: absolute;
+  bottom: 0;
+}
+.div18 {
+  height: calc(100% - 53px);
+  width: 100%;
+  top: 53px;
+  right: 0;
+  left: 0;
+  color: var(--color-black);
+}
+.div14 {
+  width: calc(100% - 420px);
+  right: 210px;
+  left: 210px;
+  height: 496px;
+}
+.tgv-logo-icon1 {
+  position: absolute;
+  top: calc(50% - 29.87px);
+  left: 40px;
+  width: 120px;
+  height: 59.73px;
+  object-fit: cover;
+}
+.tgv-b1,
+.tu-golden-village1 {
+  position: absolute;
+  display: inline-block;
+}
+.tgv-b1 {
+  top: 0;
+  left: calc(50% - 35px);
+}
+.tu-golden-village1 {
+  bottom: 0;
+  left: 0;
+  font-size: var(--font-size-lg);
+}
+.div29 {
+  position: absolute;
+  top: calc(50% - 34px);
+  left: calc(50% - 79px);
+  width: 158px;
+  height: 74px;
+}
+.logout-div1 {
+  position: absolute;
+  top: calc(50% - 13.5px);
+  left: calc(50% - 30.5px);
+  display: inline-block;
+}
+.div30 {
+  position: absolute;
+  top: calc(50% - 20px);
+  right: 40px;
+  border-radius: var(--br-xs);
+  background-color: var(--color-gray-700);
+  width: 111px;
+  height: 41px;
+  font-size: var(--font-size-lg);
+  color: var(--color-white);
+}
+.div13,
+.header-div1 {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.header-div1 {
+  background-color: var(--color-white);
+  height: 120px;
+  font-size: var(--font-size-3xl);
+  color: var(--color-gray-1100);
+}
+.div13 {
+  height: calc(100% - 275px);
+  bottom: 275px;
+}
+.read-div {
+  position: relative;
+  background-color: var(--color-gray-900);
+  width: 100%;
+  height: 1080px;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-500);
+  font-family: var(--font-roboto);
+}
