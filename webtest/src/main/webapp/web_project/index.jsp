@@ -33,7 +33,7 @@
     <div class="mainpage-div" id="MainPage">
       <div class="mainpage-div1">
         <div class="login-div">
-          <img class="tgv-logo-icon" alt="" src="public/tgv-logo@2x.png" />
+          <img class="tgv-logo-icon" alt="" src="web_project/public/tgv-logo@2x.png" />
           <form action = "/webtest/Loginservlet" class="loginmenu-div">
             <div class="dropdownitem-div" >
               <div class="rectangle-div"></div>

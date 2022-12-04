@@ -7,15 +7,23 @@ public class Review {
 	private String userName;
 	private String content;
 	private String create_date;
+	private int mid;
 	private String movie_name;
-	public Review(int id, String title,String category,String useName, String content,String create_date, String movie_name){
+	public Review(int id, String title,String category,String useName, String content,String create_date, int mid, String movie_name){
 		this.id = id;
 		this.title = title;
 		this.category = category;
 		this.userName = useName;
 		this.content = content;
 		this.create_date = create_date;
+		this.mid = mid;
 		this.movie_name = movie_name;
+	}
+	public int getMid() {
+		return mid;
+	}
+	public void setMid(int mid) {
+		this.mid = mid;
 	}
 	public String getMovie_name() {
 		return movie_name;

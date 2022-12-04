@@ -36,7 +36,9 @@ public class Movie {
 	public void setGenre(String genre) {
 		this.genre = genre;
 	}
-	public Movie(int id,String title, String info, String director, String genre){
+	public Movie() {}
+	public Movie(int id, String title, String info, String director, String genre){
+		this.id = id;
 		this.title = title;
 		this.info = info;
 		this.director = director;

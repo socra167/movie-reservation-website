@@ -19,7 +19,7 @@ public class Review_write_DAO {
 	public void open() {
 		try {
 			Class.forName(JDBC_DRIVER);
-			conn = DriverManager.getConnection(JDBC_URL, "root", "qhw12522");
+			conn = DriverManager.getConnection(JDBC_URL, "root", "1234");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -55,7 +55,6 @@ public class Review_write_DAO {
 		String sql = "insert into review(mid, uid, title, content, category) values(?, ?, ?, ?, ?)";
 		try {
 			pstmt = conn.prepareStatement(sql);
-			// 수정 필요한 부분, 1, 2에 사용자 ID, 영화 ID 얻는 코드 추가 필요
 			pstmt.setInt(1, review.getMovie()); // Movie ID (FK)
 			pstmt.setInt(2, this.uid); // User ID (FK)
 			pstmt.setString(3, review.getTitle());

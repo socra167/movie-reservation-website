@@ -1,15 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="initial-scale=1, width=device-width" />
-
-<title></title>
-
 <meta name="description" content="" />
 
-<link rel="stylesheet" href="./global.css" />
-<link rel="stylesheet" href="./seat.css" />
+<title></title>
+<link rel="stylesheet" href="./web_project/global.css" />
+<link rel="stylesheet" href="./web_project/seat.css" />
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" />
 <link rel="stylesheet"
@@ -18,43 +17,37 @@
 	href="https://fonts.googleapis.com/css2?family=HelveticaNeue:wght@400&display=swap" />
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css2?family=Helvetica Neue:wght@400&display=swap" />
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
-	integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
-	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 </head>
 <body>
 	<div class="seat-div">
 		<div class="div">
 			<div class="div1">
-				<img class="tgv-logo-icon" alt="" src="public/tgv-logo@2x.png" />
+				<img class="tgv-logo-icon" alt=""
+					src="web_project/public/tgv-logo@2x.png" />
 				<div class="div2">
 					<b class="tgv-b">TGV</b>
 					<div class="tu-golden-village">TU Golden Village</div>
 				</div>
-				<div class="div3">
-					<div class="logout-div">Logout</div>
+				<div class="div3" onclick="logout()">
+					<div class="logout-div" onclick="logout()">Logout</div>
 				</div>
 			</div>
 			<div class="div4">
 				<div class="div5">
 					<div class="div6">
 						<div class="div7">
-							<b class="b">블랙팬서-와칸다 포에버</b>
+							<b class="b">${movie.title}</b>
 							<div class="div8">
-								<div class="b">장르: 액션</div>
-								<div class="div10">감독: 라이언 쿠글러</div>
-								<div class="div11">시놉시스</div>
+								<div class="b">장르: ${movie.genre}</div>
+								<div class="div10">감독: ${movie.director}</div>
+								<div class="div11">시놉시스: </div>
 								<div class="div12">
-									<p class="p">“와칸다를 지켜라!”</p>
-									<p class="p">거대한 두 세계의 충돌, 운명을 건 최후의 전투가 시작된다!</p>
-									<p class="p">&nbsp;</p>
-									<p class="p">국왕이자 ‘블랙 팬서’인 '티찰라'의 죽음 이후</p>
-									<p class="p">수많은 강대국으로부터 위협을 받게 된 '와칸다'</p>
+									<p class="p" style="font-size: 15px">${movie.info}</p>
 								</div>
 							</div>
 						</div>
-						<img class="icon" alt="" src="public/-2@2x.png" />
+						<img class="icon" alt="" src="web_project/public/-2@2x.png" />
 					</div>
 					<div class="div13">
 						<b class="b">TGV</b>
@@ -69,10 +62,12 @@
 									class="b4">24</b><b class="b5">25</b><b class="div10">26</b>
 							</div>
 							<div class="iconnavigationchevron-right-div">
-								<img class="color-icon" alt="" src="public/-color3.svg" />
+								<img class="color-icon" alt=""
+									src="web_project/public/-color3.svg" />
 							</div>
 							<div class="div19">
-								<img class="color-icon1" alt="" src="public/-color4.svg" />
+								<img class="color-icon1" alt=""
+									src="web_project/public/-color4.svg" />
 							</div>
 						</div>
 					</div>
@@ -175,7 +170,7 @@
 						<div class="not-reserved-div" id="reserved">Not Reserved</div>
 					</div>
 					<div class="div59" id="back" onclick="Back()">
-						<img class="color-icon2" alt="" src="public/-color5.svg" />
+						<img class="color-icon2" alt="" src="web_project/public/-color5.svg" />
 					</div>
 				</div>
 			</div>
@@ -262,7 +257,7 @@
 						<div class="div121" id="confirm">선택하기</div>
 					</div>
 					<div class="div122" id="cancel" onclick="CloseModal(1)">
-						<img class="color-icon2" alt="" src="public/-color5.svg" />
+						<img class="color-icon2" alt="" src="web_project/public/-color5.svg" />
 					</div>
 				</div>
 			</div>
@@ -349,7 +344,7 @@
 						<div class="div121" id="confirm">선택하기</div>
 					</div>
 					<div class="div122" id="cancel" onclick="CloseModal(2)">
-						<img class="color-icon2" alt="" src="public/-color5.svg" />
+						<img class="color-icon2" alt="" src="web_project/public/-color5.svg" />
 					</div>
 				</div>
 			</div>
@@ -436,7 +431,7 @@
 						<div class="div121" id="confirm">선택하기</div>
 					</div>
 					<div class="div122" id="cancel" onclick="CloseModal(3)">
-						<img class="color-icon2" alt="" src="public/-color5.svg" />
+						<img class="color-icon2" alt="" src="web_project/public/-color5.svg" />
 					</div>
 				</div>
 			</div>
@@ -523,7 +518,7 @@
 						<div class="div121" id="confirm">선택하기</div>
 					</div>
 					<div class="div122" id="cancel" onclick="CloseModal(4)">
-						<img class="color-icon2" alt="" src="public/-color5.svg" />
+						<img class="color-icon2" alt="" src="web_project/public/-color5.svg" />
 					</div>
 				</div>
 			</div>
@@ -610,7 +605,7 @@
 						<div class="div121" id="confirm">선택하기</div>
 					</div>
 					<div class="div122" id="cancel" onclick="CloseModal(5)">
-						<img class="color-icon2" alt="" src="public/-color5.svg" />
+						<img class="color-icon2" alt="" src="web_project/public/-color5.svg" />
 					</div>
 				</div>
 			</div>
@@ -697,7 +692,7 @@
 						<div class="div121" id="confirm">선택하기</div>
 					</div>
 					<div class="div122" id="cancel" onclick="CloseModal(6)">
-						<img class="color-icon2" alt="" src="public/-color5.svg" />
+						<img class="color-icon2" alt="" src="web_project/public/-color5.svg" />
 					</div>
 				</div>
 			</div>
@@ -784,7 +779,7 @@
 						<div class="div121" id="confirm">선택하기</div>
 					</div>
 					<div class="div122" id="cancel" onclick="CloseModal(7)">
-						<img class="color-icon2" alt="" src="public/-color5.svg" />
+						<img class="color-icon2" alt="" src="web_project/public/-color5.svg" />
 					</div>
 				</div>
 			</div>
@@ -871,7 +866,7 @@
 						<div class="div121" id="confirm">선택하기</div>
 					</div>
 					<div class="div122" id="cancel" onclick="CloseModal(8)">
-						<img class="color-icon2" alt="" src="public/-color5.svg" />
+						<img class="color-icon2" alt="" src="web_project/public/-color5.svg" />
 					</div>
 				</div>
 			</div>
@@ -958,294 +953,298 @@
 						<div class="div121" id="confirm">선택하기</div>
 					</div>
 					<div class="div122" id="cancel" onclick="CloseModal(9)">
-						<img class="color-icon2" alt="" src="public/-color5.svg" />
+						<img class="color-icon2" alt="" src="web_project/public/-color5.svg" />
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<script>
-	var seleted;
-    var seat = [
-      {
-        A: [0, 0, 0, 0, 0, 0, 0, 0, 0],
-        B: [0, 2, 0, 0, 0, 0, 0, 0, 0],
-        C: [0, 0, 2, 0, 0, 0, 0, 0, 0],
-        D: [0, 0, 2, 0, 0, 0, 0, 0, 0],
-      },
-      {
-        A: [0, 0, 0, 0, 0, 0, 0, 0, 0],
-        B: [0, 2, 0, 0, 0, 0, 0, 0, 0],
-        C: [0, 0, 2, 0, 0, 0, 0, 0, 0],
-        D: [0, 0, 2, 0, 0, 0, 0, 0, 0],
-      },
-      {
-        A: [0, 0, 0, 0, 0, 0, 0, 0, 0],
-        B: [0, 2, 0, 0, 0, 0, 0, 0, 0],
-        C: [0, 0, 2, 0, 0, 0, 0, 0, 0],
-        D: [0, 0, 2, 0, 0, 0, 0, 0, 0],
-      },
-      {
-        A: [0, 0, 0, 0, 0, 0, 0, 0, 0],
-        B: [0, 2, 0, 0, 0, 0, 0, 0, 0],
-        C: [0, 0, 2, 0, 0, 0, 0, 0, 0],
-        D: [0, 0, 2, 0, 0, 0, 0, 0, 0],
-      },
-      {
-        A: [0, 0, 0, 0, 0, 0, 0, 0, 0],
-        B: [0, 2, 0, 0, 0, 0, 0, 0, 0],
-        C: [0, 0, 2, 0, 0, 0, 0, 0, 0],
-        D: [0, 0, 2, 0, 0, 0, 0, 0, 0],
-      },
-      {
-        A: [0, 0, 0, 0, 0, 0, 0, 0, 0],
-        B: [0, 2, 0, 0, 0, 0, 0, 0, 0],
-        C: [0, 0, 2, 0, 0, 0, 0, 0, 0],
-        D: [0, 0, 2, 0, 0, 0, 0, 0, 0],
-      },
-      {
-        A: [0, 0, 0, 0, 0, 0, 0, 0, 0],
-        B: [0, 2, 0, 0, 0, 0, 0, 0, 0],
-        C: [0, 0, 2, 0, 0, 0, 0, 0, 0],
-        D: [0, 0, 2, 0, 0, 0, 0, 0, 0],
-      },
-      {
-        A: [0, 0, 0, 0, 0, 0, 0, 0, 0],
-        B: [0, 2, 0, 0, 0, 0, 0, 0, 0],
-        C: [0, 0, 2, 0, 0, 0, 0, 0, 0],
-        D: [0, 0, 2, 0, 0, 0, 0, 0, 0],
-      },
-      {
-        A: [0, 0, 0, 0, 0, 0, 0, 0, 0],
-        B: [0, 2, 0, 0, 0, 0, 0, 0, 0],
-        C: [0, 0, 2, 0, 0, 0, 0, 0, 0],
-        D: [0, 0, 2, 0, 0, 0, 0, 0, 0],
-      },
-    ];
+      var seleted;
+      var seat = [
+        {
+          A: [0, 0, 0, 0, 0, 0, 0, 0, 0],
+          B: [0, 2, 0, 0, 0, 0, 0, 0, 0],
+          C: [0, 0, 2, 0, 0, 0, 0, 0, 0],
+          D: [0, 0, 2, 0, 0, 0, 0, 0, 0],
+        },
+        {
+          A: [0, 0, 0, 0, 0, 0, 0, 0, 0],
+          B: [0, 2, 0, 0, 0, 0, 0, 0, 0],
+          C: [0, 0, 2, 0, 0, 0, 0, 0, 0],
+          D: [0, 0, 2, 0, 0, 0, 0, 0, 0],
+        },
+        {
+          A: [0, 0, 0, 0, 0, 0, 0, 0, 0],
+          B: [0, 2, 0, 0, 0, 0, 0, 0, 0],
+          C: [0, 0, 2, 0, 0, 0, 0, 0, 0],
+          D: [0, 0, 2, 0, 0, 0, 0, 0, 0],
+        },
+        {
+          A: [0, 0, 0, 0, 0, 0, 0, 0, 0],
+          B: [0, 2, 0, 0, 0, 0, 0, 0, 0],
+          C: [0, 0, 2, 0, 0, 0, 0, 0, 0],
+          D: [0, 0, 2, 0, 0, 0, 0, 0, 0],
+        },
+        {
+          A: [0, 0, 0, 0, 0, 0, 0, 0, 0],
+          B: [0, 2, 0, 0, 0, 0, 0, 0, 0],
+          C: [0, 0, 2, 0, 0, 0, 0, 0, 0],
+          D: [0, 0, 2, 0, 0, 0, 0, 0, 0],
+        },
+        {
+          A: [0, 0, 0, 0, 0, 0, 0, 0, 0],
+          B: [0, 2, 0, 0, 0, 0, 0, 0, 0],
+          C: [0, 0, 2, 0, 0, 0, 0, 0, 0],
+          D: [0, 0, 2, 0, 0, 0, 0, 0, 0],
+        },
+        {
+          A: [0, 0, 0, 0, 0, 0, 0, 0, 0],
+          B: [0, 2, 0, 0, 0, 0, 0, 0, 0],
+          C: [0, 0, 2, 0, 0, 0, 0, 0, 0],
+          D: [0, 0, 2, 0, 0, 0, 0, 0, 0],
+        },
+        {
+          A: [0, 0, 0, 0, 0, 0, 0, 0, 0],
+          B: [0, 2, 0, 0, 0, 0, 0, 0, 0],
+          C: [0, 0, 2, 0, 0, 0, 0, 0, 0],
+          D: [0, 0, 2, 0, 0, 0, 0, 0, 0],
+        },
+        {
+          A: [0, 0, 0, 0, 0, 0, 0, 0, 0],
+          B: [0, 2, 0, 0, 0, 0, 0, 0, 0],
+          C: [0, 0, 2, 0, 0, 0, 0, 0, 0],
+          D: [0, 0, 2, 0, 0, 0, 0, 0, 0],
+        },
+      ];
 
-    var httpRequest = new XMLHttpRequest();
-    var GetData = new XMLHttpRequest();
+      var httpRequest = new XMLHttpRequest();
+      var GetData = new XMLHttpRequest();
 
-    GetData.onreadystatechange = () => {
-      /* readyState가 Done이고 응답 값이 200일 때, 받아온 response로 name과 age를 그려줌 */
-      if (GetData.readyState === XMLHttpRequest.DONE) {
-        if (GetData.status === 200) {
-          var result = GetData.response;
-          console.log(result);
-          seat = [...result];
-        } else {
-          console.log("Request Error!");
-        }
-      }
-    };
-    GetData.open("GET", "http://localhost:8080/webtest/seatLoad");
-    /* Response Type을 Json으로 사전 정의 */
-    GetData.responseType = "json";
-    /* 정의된 서버에 요청을 전송 */
-    GetData.send();
-
-    var QuerySeat = document.querySelectorAll(".div78");
-    var People = document.querySelectorAll(".div65");
-    var ModalCurrentReserved = document.querySelectorAll(".div63 .div10");
-    var beforeSeat_I = -1;
-    var beforeSeat_J = -1;
-    var beforeSeat_K = -1;
-    var mappingObject = {
-      0: "A",
-      1: "B",
-      2: "C",
-      3: "D",
-    };
-
-    if (QuerySeat.length > 0) {
-      for (let i = 0; i < QuerySeat.length; i++) {
-        for (let j = 0; j < QuerySeat[i].childElementCount; j++) {
-          for (
-            let k = 0;
-            k < QuerySeat[i].children[j].childElementCount;
-            k++
-          ) {
-            if (seat[i][mappingObject[j]][k] == 1) {
-              QuerySeat[i].children[j].children[k].style.cssText =
-                "border: 1px solid var(--color-gray-800);  background-color: var(--color-white)";
-            } else if (seat[i][mappingObject[j]][k] == 0) {
-              QuerySeat[i].children[j].children[k].style.cssText =
-                "border: none; background-color: var(--color-gray-100);";
-            } else if (seat[i][mappingObject[j]][k] == 2) {
-              QuerySeat[i].children[j].children[k].style.cssText =
-                "border: none; background-color: var(--color-black);";
-            }
-            QuerySeat[i].children[j].children[k].addEventListener(
-              "click",
-              (e) => {
-                SelectSeat(i, j, k);
-                beforeSeat_J = j;
-                beforeSeat_K = k;
-                beforeSeat_I = i;
-              }
-            );
-          }
-        }
-      }
-    }
-
-    function OpenModal(i) {
-      console.log(`modal-${i + 1}`);
-      var modal = document.getElementById(`modal-${i + 1}`);
-      if (modal) {
-        console.log(`OpemModal-${i + 1}: open`);
-        InitModal(i);
-        modal.style.display = "flex";
-      }
-    }
-    function CloseModal(i) {
-      var modal = document.getElementById(`modal-${i}`);
-      if (modal) {
-        console.log(`CloseModal-${i}: closed`);
-        let copy = _.cloneDeep(seat);
-        for (let j = 0; j < Object.keys(copy[i - 1]).length; j++) {
-          for (let k = 0; k < copy[i - 1][mappingObject[j]].length; k++) {
-            if (copy[i - 1][mappingObject[j]][k] == 1) {
-              copy[i - 1][mappingObject[j]][k] = 0;
-            }
-          }
-        }
-        seat = copy;
-        modal.style.display = "none";
-      }
-    }
-    function ConfirmModal(i) {
-      var modal = document.getElementById(`modal-${i}`);
-      var id = document.getElementById(`reserve-${i - 1}`);
-      var reserved = document.getElementById("reserved");
-      var seatID = document.getElementById("seat-ID");
-      if (modal) {
-        console.log(`ConfirmModal-${i}: Confirmed`);
-        let copy = _.cloneDeep(seat);
-        let max = Number(
-          id.children[0].children[0].children[1].innerHTML.slice(2)
-        );
-        let current = Number(
-          id.children[0].children[0].children[0].innerHTML
-        );
-        let x = 0;
-        let y = 0;
-        for (let j = 0; j < Object.keys(copy[i - 1]).length; j++) {
-          for (let k = 0; k < copy[i - 1][mappingObject[j]].length; k++) {
-            if (copy[i - 1][mappingObject[j]][k] == 1) {
-              copy[i - 1][mappingObject[j]][k] = 2;
-              current += 1;
-              x = k + 1;
-              y = j;
-            }
-          }
-        }
-        if (current > max) {
-          alert("overflow seat");
-          CloseModal(i);
-        } else {
-          seat = copy;
-          id.children[0].children[0].children[0].innerHTML = `${String(
-            current
-          ).padStart(3, "0")} `;
-          reserved.innerHTML = "Reserved";
-          seatID.innerHTML = `${id.children[0].children[1].children[0].innerHTML} ${mappingObject[y]}-${x}`;
-          getRequest(i, y, x);
-        }
-        modal.style.display = "none";
-      }
-    }
-    function SelectSeat(axis, line, num) {
-      let peopleNumber = Number(People[axis].innerHTML.slice(0, 1));
-      let currentReserved = Number(
-        ModalCurrentReserved[axis].children[0].innerHTML
-      );
-      if (beforeSeat_I != -1) {
-        if (
-          beforeSeat_I != axis ||
-          beforeSeat_J != line ||
-          beforeSeat_K != num
-        ) {
-          if (
-            seat[beforeSeat_I][mappingObject[beforeSeat_J]][beforeSeat_K] != 2
-          ) {
-            seat[beforeSeat_I][mappingObject[beforeSeat_J]][beforeSeat_K] = 0;
-            QuerySeat[beforeSeat_I].children[beforeSeat_J].children[
-              beforeSeat_K
-            ].style.cssText =
-              "border: none; background-color: var(--color-gray-100);";
-            currentReserved -= 1;
-            // People[axis].innerHTML = peopleNumber - 1 + "인";
-          }
-        }
-      }
-      if (seat[axis][mappingObject[line]][num] == 0) {
-        seat[axis][mappingObject[line]][num] = 1;
-        // People[axis].innerHTML = peopleNumber + 1 + "인";
-        currentReserved += 1;
-        QuerySeat[axis].children[line].children[num].style.cssText =
-          "border: 1px solid var(--color-gray-800);  background-color: var(--color-white)";
-      } else if (seat[axis][mappingObject[line]][num] == 1) {
-        seat[axis][mappingObject[line]][num] = 0;
-        // People[axis].innerHTML = peopleNumber - 1 + "인";
-        currentReserved -= 1;
-        QuerySeat[axis].children[line].children[num].style.cssText =
-          "border: none; background-color: var(--color-gray-100);";
-      }
-      ModalCurrentReserved[axis].children[0].innerHTML = String(
-        currentReserved
-      ).padStart(3, "0");
-      console.log(`axis: ${axis}, line: ${line}, num: ${num}`);
-    }
-    function InitModal(k) {
-      People[k].innerHTML = "1인";
-      let currentReserved = 0;
-      if (QuerySeat) {
-        for (let i = 0; i < QuerySeat[k].childElementCount; i++) {
-          for (
-            let j = 0;
-            j < QuerySeat[k].children[i].childElementCount;
-            j++
-          ) {
-            if (seat[k][mappingObject[i]][j] == 1) {
-              QuerySeat[k].children[i].children[j].style.cssText =
-                "border: 1px solid var(--color-gray-800);  background-color: var(--color-white)";
-            } else if (seat[k][mappingObject[i]][j] == 0) {
-              QuerySeat[k].children[i].children[j].style.cssText =
-                "border: none; background-color: var(--color-gray-100);";
-            } else if (seat[k][mappingObject[i]][j] == 2) {
-              QuerySeat[k].children[i].children[j].style.cssText =
-                "border: none; background-color: var(--color-black);";
-              currentReserved += 1;
-            }
-          }
-        }
-        ModalCurrentReserved[k].children[0].innerHTML = String(
-          currentReserved
-        ).padStart(3, "0");
-      }
-    }
-    var back = document.getElementById("back");
-    if (back) {
-      back.addEventListener("click", function (e) {
-        window.location.href = "/webtest/Movie_page";
-      });
-    }
-
-    function getRequest(i, j, k) {
-      httpRequest.onreadystatechange = () => {
-        if (httpRequest.readyState === XMLHttpRequest.DONE) {
-          if (httpRequest.status === 200) {
-            console.log("seat.html::getRequest > GET 200");
+      GetData.onreadystatechange = () => {
+        /* readyState가 Done이고 응답 값이 200일 때, 받아온 response로 name과 age를 그려줌 */
+        if (GetData.readyState === XMLHttpRequest.DONE) {
+          if (GetData.status === 200) {
+            var result = GetData.response;
+            console.log(result);
+            seat = [...result];
           } else {
-            console.log("seat.html::getRequest > Request ERROR");
+            console.log("Request Error!");
           }
         }
       };
-      httpRequest.open("GET", `/getserlet/?action=${i}${j}${k}`);
-      httpRequest.responseType = "json";
-      httpRequest.send();
-    }
-  </script>
+      GetData.open("GET", "http://localhost:8080/webtest/seatLoad?mid=${movie.id}");
+      /* Response Type을 Json으로 사전 정의 */
+      GetData.responseType = "json";
+      /* 정의된 서버에 요청을 전송 */
+      GetData.send();
+
+      var QuerySeat = document.querySelectorAll(".div78");
+      var People = document.querySelectorAll(".div65");
+      var ModalCurrentReserved = document.querySelectorAll(".div63 .div10");
+      var beforeSeat_I = -1;
+      var beforeSeat_J = -1;
+      var beforeSeat_K = -1;
+      var mappingObject = {
+        0: "A",
+        1: "B",
+        2: "C",
+        3: "D",
+      };
+
+      if (QuerySeat.length > 0) {
+        for (let i = 0; i < QuerySeat.length; i++) {
+          for (let j = 0; j < QuerySeat[i].childElementCount; j++) {
+            for (
+              let k = 0;
+              k < QuerySeat[i].children[j].childElementCount;
+              k++
+            ) {
+              if (seat[i][mappingObject[j]][k] == 1) {
+                QuerySeat[i].children[j].children[k].style.cssText =
+                  "border: 1px solid var(--color-gray-800);  background-color: var(--color-white)";
+              } else if (seat[i][mappingObject[j]][k] == 0) {
+                QuerySeat[i].children[j].children[k].style.cssText =
+                  "border: none; background-color: var(--color-gray-100);";
+              } else if (seat[i][mappingObject[j]][k] == 2) {
+                QuerySeat[i].children[j].children[k].style.cssText =
+                  "border: none; background-color: var(--color-black);";
+              }
+              QuerySeat[i].children[j].children[k].addEventListener(
+                "click",
+                (e) => {
+                  SelectSeat(i, j, k);
+                  beforeSeat_J = j;
+                  beforeSeat_K = k;
+                  beforeSeat_I = i;
+                }
+              );
+            }
+          }
+        }
+      }
+
+      function OpenModal(i) {
+        console.log(`modal-\${i + 1}`);
+        var modal = document.getElementById(`modal-\${i + 1}`);
+        if (modal) {
+          console.log(`OpemModal-\${i + 1}: open`);
+          InitModal(i);
+          modal.style.display = "flex";
+        }
+      }
+      function CloseModal(i) {
+        var modal = document.getElementById(`modal-\${i}`);
+        if (modal) {
+          console.log(`CloseModal-\${i}: closed`);
+          let copy = _.cloneDeep(seat);
+          for (let j = 0; j < Object.keys(copy[i - 1]).length; j++) {
+            for (let k = 0; k < copy[i - 1][mappingObject[j]].length; k++) {
+              if (copy[i - 1][mappingObject[j]][k] == 1) {
+                copy[i - 1][mappingObject[j]][k] = 0;
+              }
+            }
+          }
+          seat = copy;
+          modal.style.display = "none";
+        }
+      }
+      function ConfirmModal(i) {
+        var modal = document.getElementById(`modal-\${i}`);
+        var id = document.getElementById(`reserve-\${i - 1}`);
+        var reserved = document.getElementById("reserved");
+        var seatID = document.getElementById("seat-ID");
+        if (modal) {
+          console.log(`ConfirmModal-\${i}: Confirmed`);
+          let copy = _.cloneDeep(seat);
+          let max = Number(
+            id.children[0].children[0].children[1].innerHTML.slice(2)
+          );
+          let current = Number(
+            id.children[0].children[0].children[0].innerHTML
+          );
+          let x = 0;
+          let y = 0;
+          for (let j = 0; j < Object.keys(copy[i - 1]).length; j++) {
+            for (let k = 0; k < copy[i - 1][mappingObject[j]].length; k++) {
+              if (copy[i - 1][mappingObject[j]][k] == 1) {
+                copy[i - 1][mappingObject[j]][k] = 2;
+                current += 1;
+                x = k + 1;
+                y = j;
+              }
+            }
+          }
+          if (current > max) {
+            alert("overflow seat");
+            CloseModal(i);
+          } else {
+            seat = copy;
+            id.children[0].children[0].children[0].innerHTML = `\${String(
+              current
+            ).padStart(3, "0")} `;
+            reserved.innerHTML = "Reserved";
+            seatID.innerHTML = `\${id.children[0].children[1].children[0].innerHTML} \${mappingObject[y]}-\${x}`;
+            getRequest(i, y, x);
+          }
+          modal.style.display = "none";
+        }
+      }
+      function SelectSeat(axis, line, num) {
+        let peopleNumber = Number(People[axis].innerHTML.slice(0, 1));
+        let currentReserved = Number(
+          ModalCurrentReserved[axis].children[0].innerHTML
+        );
+        if (beforeSeat_I != -1) {
+          if (
+            beforeSeat_I != axis ||
+            beforeSeat_J != line ||
+            beforeSeat_K != num
+          ) {
+            if (
+              seat[beforeSeat_I][mappingObject[beforeSeat_J]][beforeSeat_K] != 2
+            ) {
+              seat[beforeSeat_I][mappingObject[beforeSeat_J]][beforeSeat_K] = 0;
+              QuerySeat[beforeSeat_I].children[beforeSeat_J].children[
+                beforeSeat_K
+              ].style.cssText =
+                "border: none; background-color: var(--color-gray-100);";
+              currentReserved -= 1;
+              // People[axis].innerHTML = peopleNumber - 1 + "인";
+            }
+          }
+        }
+        if (seat[axis][mappingObject[line]][num] == 0) {
+          seat[axis][mappingObject[line]][num] = 1;
+          // People[axis].innerHTML = peopleNumber + 1 + "인";
+          currentReserved += 1;
+          QuerySeat[axis].children[line].children[num].style.cssText =
+            "border: 1px solid var(--color-gray-800);  background-color: var(--color-white)";
+        } else if (seat[axis][mappingObject[line]][num] == 1) {
+          seat[axis][mappingObject[line]][num] = 0;
+          // People[axis].innerHTML = peopleNumber - 1 + "인";
+          currentReserved -= 1;
+          QuerySeat[axis].children[line].children[num].style.cssText =
+            "border: none; background-color: var(--color-gray-100);";
+        }
+        ModalCurrentReserved[axis].children[0].innerHTML = String(
+          currentReserved
+        ).padStart(3, "0");
+        console.log(`axis: \${axis}, line: \${line}, num: \${num}`);
+      }
+      function InitModal(k) {
+        People[k].innerHTML = "1인";
+        let currentReserved = 0;
+        if (QuerySeat) {
+          for (let i = 0; i < QuerySeat[k].childElementCount; i++) {
+            for (
+              let j = 0;
+              j < QuerySeat[k].children[i].childElementCount;
+              j++
+            ) {
+              if (seat[k][mappingObject[i]][j] == 1) {
+                QuerySeat[k].children[i].children[j].style.cssText =
+                  "border: 1px solid var(--color-gray-800);  background-color: var(--color-white)";
+              } else if (seat[k][mappingObject[i]][j] == 0) {
+                QuerySeat[k].children[i].children[j].style.cssText =
+                  "border: none; background-color: var(--color-gray-100);";
+              } else if (seat[k][mappingObject[i]][j] == 2) {
+                QuerySeat[k].children[i].children[j].style.cssText =
+                  "border: none; background-color: var(--color-black);";
+                currentReserved += 1;
+              }
+            }
+          }
+          ModalCurrentReserved[k].children[0].innerHTML = String(
+            currentReserved
+          ).padStart(3, "0");
+        }
+      }
+      var back = document.getElementById("back");
+      if (back) {
+        back.addEventListener("click", function (e) {
+          window.location.href = "/webtest/Movie_page";
+        });
+      }
+
+      function getRequest(i, j, k) {
+        httpRequest.onreadystatechange = () => {
+          if (httpRequest.readyState === XMLHttpRequest.DONE) {
+            if (httpRequest.status === 200) {
+              console.log("seat.html::getRequest > GET 200");
+            } else {
+              console.log("seat.html::getRequest > Request ERROR");
+            }
+          }
+        };
+        let currentURL = window.location.href;
+        httpRequest.open("GET", `${currentURL}?mid=${movie.id}&action=\${i-1}\${mappingObject[j]}\${k-1}`);
+        httpRequest.responseType = "json";
+        httpRequest.send();
+      }
+      function logout(){
+    	  window.location.href = "/webtest/Logout";
+      }
+    </script>
 </body>
 </html>

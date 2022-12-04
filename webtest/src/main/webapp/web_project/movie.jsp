@@ -32,11 +32,13 @@
 				<b class="b53"><span>영화 | </span><span class="span1">리뷰</span></b>
 			</div>
 
-			<form action="/webtest/Movie_page" class="div57">
-				<input class="icon" alt="" id="node" name="title" />
-				<div class="iconactionsearch-24px-div1">
-					<input type="image" src="./web_project/public/-color7.svg"
-						alt="제출버튼">Ï
+			<form action="/webtest/Movie_page" id="form">
+				<div class="div57">
+					<input class="icon" alt="" id="node" name="title" />
+					<div class="iconactionsearch-24px-div1">
+						<img class="color-icon9" src="./web_project/public/-color7.svg"
+							onclick="document.getElementById('form').submit();" />
+					</div>
 				</div>
 			</form>
 		</div>
@@ -52,7 +54,6 @@
 			</div>
 		</div>
 		<div class="movies-div">
-
 			<div class="first-item-div">
 				<div class="movie-1-div">
 					<b class="b54">${list.get(0).getTitle()}</b>
@@ -105,37 +106,43 @@
 	</div>
 
 	<script>
-		var button1 = document.getElementById("button-1");
-		if (button1) {
-			button1.addEventListener("click", function(e) {
-				window.location.href = "./seat.html";
-			});
-		}
-		var button2 = document.getElementById("button-2");
-		if (button2) {
-			button2.addEventListener("click", function(e) {
-				window.location.href = "./seat.html";
-			});
-		}
-		var button3 = document.getElementById("button-3");
-		if (button3) {
-			button3.addEventListener("click", function(e) {
-				window.location.href = "./seat.html";
-			});
-		}
+      var button1 = document.getElementById("button-1");
+      if (button1) {
+    	  if (${list.get(0).getId()} != -1){
+	        button1.addEventListener("click", function (e) {
+    	    	window.location.href = "/webtest/Seat_controller?mid=${list.get(0).getId()}";
+        	});  
+    	  }
+      }
+      var button2 = document.getElementById("button-2");
+      if (button2) {
+    	  if (${list.get(1).getId()} != -1){
+	        button2.addEventListener("click", function (e) {
+    	    	window.location.href = "/webtest/Seat_controller?mid=${list.get(1).getId()}";
+        	});  
+    	  }
+      }
+      var button3 = document.getElementById("button-3");
+      if (button3) {
+    	  if (${list.get(2).getId()} != -1){
+	        button3.addEventListener("click", function (e) {
+    	    	window.location.href = "/webtest/Seat_controller?mid=${list.get(2).getId()}";
+        	});  
+    	  }
+      }
 
-		var next = document.querySelector(".div56");
-		if (next) {
-			next.addEventListener("click", function(e) {
-				window.location.href = "/webtest/Review_page";
-			});
-		}
-		var next = document.querySelector(".div59");
-		if (next) {
-			next.addEventListener("click", function(e) {
-				window.location.href = "/webtest/Logout";
-			});
-		}
-	</script>
+      var review = document.querySelector(".div56");
+      if (review) {
+        review.addEventListener("click", function (e) {
+          window.location.href = "/webtest/Review_page";
+        });
+      }
+      var next = document.querySelector(".div59");
+      if (next) {
+        next.addEventListener("click", function (e) {
+          window.location.href = "/webtest/Logout";
+        });
+      }
+    </script>
 </body>
 </html>
