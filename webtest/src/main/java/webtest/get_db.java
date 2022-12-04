@@ -130,6 +130,65 @@ public class get_db {
 		return review_list;
 	}
 	
+	public ArrayList<Review> Review_Data(String search_title) throws SQLException{
+		try {
+			ArrayList<Review> review_list = new ArrayList<Review>();
+			String sql_review_select = "select * from review where title like "+"'%"+search_title+"%'";
+			this.stmt = this.conn.createStatement();
+			this.rs_review = this.stmt.executeQuery(sql_review_select);
+	        while (rs_review.next()) {
+	        	System.out.println("진");
+	        	int id = this.rs_review.getInt("id");
+	            String title = this.rs_review.getString("title");
+	            int movie_id = this.rs_review.getInt("mid");
+	            int user_id = this.rs_review.getInt("uid");
+	            String content = this.rs_review.getString("content");
+	            String create_date = this.rs_review.getString("is_created");
+	            
+	            String select_mid_sql = "SELECT * FROM movie WHERE id = "+ Integer.toString(movie_id);
+	            this.stmt2 = this.conn.createStatement();
+	            ResultSet mid_title = this.stmt2.executeQuery(select_mid_sql);
+	            mid_title.next();
+	            String category = mid_title.getString("genre");
+	            String movie_name = mid_title.getString("title");
+	            mid_title.close();
+	            this.stmt2.close();
+	            
+	            String select_uid_sql = "SELECT * FROM user WHERE id = "+ Integer.toString(user_id);
+	            this.stmt2 = this.conn.createStatement();
+	            ResultSet uid_title = this.stmt2.executeQuery(select_uid_sql);
+	            uid_title.next();
+	            String user_name = uid_title.getString("user_name");
+	            Review temp2 = new Review(id,title, category, user_name, content,create_date,movie_name);
+	            mid_title.close();
+	            this.stmt2.close();
+	            
+	            review_list.add(temp2);
+	        	}
+	        
+	        while(review_list.size() < 1) {
+	        	int id = 5;
+	            String title = "검색 결과가 없습니다.";
+	            String content = "";
+	            String create_date = "";
+	            String category = "";
+	            String user_name = "";
+	            String movie_name = "";
+	            Review temp2 = new Review(id,title, category, user_name, content,create_date,movie_name);
+	            review_list.add(temp2);
+	        }
+	        return review_list;
+			}
+            catch (Exception e) {
+                System.out.println("드라이버 로딩 실패 ");
+                System.out.println(e);
+                try {
+                    this.conn.close();
+                } catch (SQLException e1) {}
+            }
+		return review_list;
+	}
+	
 	public ArrayList<User> User_Data() throws SQLException{
 		ArrayList<User> user_list = new ArrayList<User>();
 		String sql_user_select = "select * from user";
@@ -178,4 +237,5 @@ public class get_db {
         this.stmt2.close();
         return uid;
 	}
+
 }

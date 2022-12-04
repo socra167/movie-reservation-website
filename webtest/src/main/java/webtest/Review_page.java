@@ -39,11 +39,34 @@ public class Review_page extends HttpServlet {
 			e.printStackTrace();
 		}
 		ArrayList<Review> review_data;
+		String title =request.getParameter("title");
+		if (title == null) {
+			try {
+				review_data = Data.Review_Data();
+				request.setAttribute("list", review_data);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				System.out.print("error");
+			}
+		}
+		else {
+			try {
+				System.out.println(title);
+				review_data = Data.Review_Data(title);
+				request.setAttribute("list", review_data);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				System.out.print("error");
+			}
+		}
+
+		RequestDispatcher dispatcher = request.getRequestDispatcher("web_project/review.jsp");
+		dispatcher.forward(request,response);
 		try {
 			review_data = Data.Review_Data();
 			request.setAttribute("list", review_data);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("web_project/review.jsp");
-			dispatcher.forward(request,response);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

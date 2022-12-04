@@ -82,33 +82,13 @@
                 ><span>영화</span><span class="span"> | 리뷰</span></b
               >
             </div>
-            <div class="div55">
+            <form action="/webtest/Review_page" class="div55">
+              <input class="icon" alt="" id="node" name="title" /> 
               <div class="iconactionsearch-24px-div">
-                <img class="color-icon6" alt="" src="./web_project/public/-color7.svg" />
+                <input type="image" src="./web_project/public/-color7.svg"alt="제출버튼">Ï
               </div>
-              <div class="categories-div">Categories</div>
-              <img class="color-icon8" alt="" src="./web_project/public/-color8.svg" />
-            </div>
-            <div class="dropdownmenuselect-div2">
-              <div class="content-div2">
-                <div class="dropdownitem-div8">
-                  <div class="rectangle-div8"></div>
-                  <div class="label-div8">Action</div>
-                </div>
-                <div class="dropdownitem-div8">
-                  <div class="rectangle-div8"></div>
-                  <div class="label-div8">Another action</div>
-                </div>
-                <div class="dropdownitem-div8">
-                  <div class="rectangle-div8"></div>
-                  <div class="label-div8">Something else here</div>
-                </div>
-                <div class="dropdownitem-div8">
-                  <div class="rectangle-div8"></div>
-                  <div class="label-div8">Something else here</div>
-                </div>
-              </div>
-            </div>
+            </form>
+  
           </div>
         </div>
       </div>
