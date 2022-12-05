@@ -81,7 +81,7 @@ public class get_db {
 
 		while (movie_list.size() < 3) {
 			int id = -1;
-			String title = "결과 없음";
+			String title = "";
 			String info = "";
 			String director = "";
 			String genre = "";

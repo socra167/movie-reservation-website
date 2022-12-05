@@ -56,6 +56,9 @@
 		<div class="movies-div">
 			<div class="first-item-div">
 				<div class="movie-1-div">
+				<c:if test="${list.get(0).getTitle() eq ''}">
+				<jsp:forward page="/not_found"/>
+				</c:if>
 					<b class="b54">${list.get(0).getTitle()}</b>
 					<div class="div60">
 						<p class="p10">${list.get(0).getDirector()}</p>

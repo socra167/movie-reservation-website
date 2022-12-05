@@ -8,8 +8,8 @@
 
     <meta name="description" content="" />
 
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./not-found.css" />
+    <link rel="stylesheet" href="./web_project/global.css" />
+    <link rel="stylesheet" href="./web_project/not-found.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap"
@@ -39,12 +39,16 @@
       <div class="div183"></div>
       <b class="sorry-no-search-result">Sorry, No Search Result</b>
       <div class="div184"><b class="go-to-main">TGV</b></div>
-      <div class="div185"><b class="go-to-main">Go to Main</b></div>
+      <div class="div185"><b class="go-to-main" onclick="Back()">Go to Main</b></div>
       <div class="div186">
         <img class="color-icon14" alt="" src="public/-color3.svg" />
       </div>
     </div>
 
-    <script></script>
+    <script>
+      function Back(){
+        window.location.href = "/webtest/Movie_page";
+      }
+    </script>
   </body>
 </html>
