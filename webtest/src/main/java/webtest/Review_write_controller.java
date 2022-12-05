@@ -28,7 +28,13 @@ public class Review_write_controller extends HttpServlet {
 			return;
 		} else {
 			switch(action) {
-				case "insert": view = insert(request, response);break;
+				case "insert": {
+					view = insert(request, response);
+					request.setAttribute("title", "");
+					response.sendRedirect("http://localhost:8080/webtest/Review_page");
+					return;
+				
+				}
 				case "getMovies": view = getMovies(request, response);break;
 				default: view = getMovies(request, response);
 				break;
@@ -84,7 +90,7 @@ public class Review_write_controller extends HttpServlet {
 			BeanUtils.populate(review, request.getParameterMap());
 		} catch(Exception e) {e.printStackTrace();}
 		dao.insert(review);
-//		getServletContext().getRequestDispatcher("/web_project/review.jsp").forward(request, response); // DB insert 후 페이지 이동
+		//getServletContext().getRequestDispatcher("/web_project/review.jsp").forward(request, response); // DB insert 후 페이지 이동
 		return "/Review_page";
 	}
 }

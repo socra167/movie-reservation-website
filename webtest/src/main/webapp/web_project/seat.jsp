@@ -47,7 +47,7 @@
 								</div>
 							</div>
 						</div>
-						<img class="icon" alt="" src="${movie.url} }" />
+						<img class="icon" alt="" src="${movie.url}" />
 					</div>
 					<div class="div13">
 						<b class="b">TGV</b>
