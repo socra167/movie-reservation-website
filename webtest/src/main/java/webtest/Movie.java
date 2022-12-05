@@ -6,6 +6,10 @@ public class Movie {
 	private String info;
 	private String director;
 	private String genre;
+	private String url;
+	private String reservation_rate;
+	private String rate;
+	
 	public int getId() {
 		return id;
 	}
@@ -33,15 +37,42 @@ public class Movie {
 	public String getGenre() {
 		return genre;
 	}
+	
 	public void setGenre(String genre) {
 		this.genre = genre;
 	}
+	
 	public Movie() {}
-	public Movie(int id, String title, String info, String director, String genre){
+	
+
+	public Movie(int id, String title, String info, String director, String genre, String url, String reservation_rate,
+			String rate) {
+		super();
 		this.id = id;
 		this.title = title;
 		this.info = info;
 		this.director = director;
 		this.genre = genre;
+		this.url = url;
+		this.reservation_rate = reservation_rate;
+		this.rate = rate;
+	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
+	public String getRate() {
+		return rate;
+	}
+	public void setRate(String rate) {
+		this.rate = rate;
+	}
+	public String getReservation_rate() {
+		return reservation_rate;
+	}
+	public void setReservation_rate(String reservation_rate) {
+		this.reservation_rate = reservation_rate;
 	}
 }

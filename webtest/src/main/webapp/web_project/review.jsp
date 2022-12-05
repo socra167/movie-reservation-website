@@ -62,12 +62,12 @@
 								<%-- <c:if text="${10 > status.count }"> --%>
 								<div class="div${status.count+43}" onclick=read(
 									"${feature.id}")>
-									<b class="b7" onclick=read("${feature.id}")>${feature.getTitle()}
-									</b><b class="b8" onclick=read("${feature.id}")>${feature.getMovie_name()}</b><b
-										class="b9" onclick=read("${feature.id}")>${feature.getCategory()}</b><b
-										class="user1-b" onclick=read("${feature.id}")>${feature.getUserName()}</b><b
-										class="b10" onclick=read("${feature.id}")>${feature.getCreate_date()}</b><b
-										class="no-b" onclick=read("${feature.id}")>${status.count}</b>
+									<b class="b7" onclick=read( "${feature.id}")>${feature.getTitle()}
+									</b><b class="b8" onclick=read( "${feature.id}")>${feature.getMovie_name()}</b><b
+										class="b9" onclick=read( "${feature.id}")>${feature.getCategory()}</b><b
+										class="user1-b" onclick=read( "${feature.id}")>${feature.getUserName()}</b><b
+										class="b10" onclick=read( "${feature.id}")>${feature.getCreate_date()}</b><b
+										class="no-b" onclick=read( "${feature.id}")>${status.count}</b>
 								</div>
 								<%-- </c:if> --%>
 							</c:forEach>

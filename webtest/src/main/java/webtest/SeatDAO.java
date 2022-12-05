@@ -20,7 +20,7 @@ public class SeatDAO {
 	public void open() {
 		try {
 			Class.forName(JDBC_DRIVER);
-			conn = DriverManager.getConnection(JDBC_URL, "root", "1234");
+			conn = DriverManager.getConnection(JDBC_URL, "root", "qhw12522");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -28,7 +28,7 @@ public class SeatDAO {
 
 	public void close() {
 		try {
-			pstmt.close();
+
 			conn.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -48,6 +48,9 @@ public class SeatDAO {
 				movie.setInfo(ms.getString("info"));
 				movie.setDirector(ms.getString("director"));
 				movie.setGenre(ms.getString("genre"));
+				movie.setUrl(ms.getString("url"));
+				movie.setRate("rate");
+				movie.setReservation_rate("reservation_rate");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

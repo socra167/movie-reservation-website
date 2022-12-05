@@ -61,7 +61,7 @@
 						<p class="p10">${list.get(0).getDirector()}</p>
 						<p class="p10">${list.get(0).getInfo()}</p>
 					</div>
-					<img class="icon1" alt="" src="./web_project/public/--1@2x.png" />
+					<img class="icon1" alt="" src= "${list.get(0).getUrl()}" />
 				</div>
 				<div class="hover-1-div">
 					<button class="button" autofocus id="button-1">
@@ -77,7 +77,7 @@
 						<p class="p10">${list.get(1).getDirector()}</p>
 						<p class="p10">${list.get(1).getInfo()}</p>
 					</div>
-					<img class="icon1" alt="" src="./web_project/public/--1@2x.png" />
+					<img class="icon1" alt="" src= "${list.get(1).getUrl()}" />
 				</div>
 				<div class="hover-2-div">
 					<div class="div64" id="button-2">
@@ -93,7 +93,7 @@
 						<p class="p10">${list.get(2).getDirector()}</p>
 						<p class="p10">${list.get(2).getInfo()}</p>
 					</div>
-					<img class="icon1" alt="" src="./web_project/public/--1@2x.png" />
+					<img class="icon1" alt="" src= "${list.get(2).getUrl()}" />
 				</div>
 				<div class="hover-3-div">
 					<div class="div64" id="button-3">

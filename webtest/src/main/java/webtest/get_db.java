@@ -24,7 +24,7 @@ public class get_db {
 	public get_db() throws SQLException {
 		final String USERNAME = "root";// DBMS접속 시 아이디
 		final String URL = "jdbc:mysql://localhost:3306/tgv_db";// DBMS접속할 db명
-		final String PASSWORD = "1234";// DBMS접속 시 비밀번호
+		final String PASSWORD = "qhw12522";// DBMS접속 시 비밀번호
 		try {
 			System.out.println("생성자");
 			Class.forName("com.mysql.jdbc.Driver");
@@ -52,7 +52,10 @@ public class get_db {
 			String info = rs_movie.getString("info");
 			String director = rs_movie.getString("director");
 			String genre = rs_movie.getString("genre"); // rs.getString("email");
-			Movie temp = new Movie(id, title, info, director, genre);
+			String url = rs_movie.getString("url");
+			String reservation_rate = rs_movie.getString("reservation_rate");
+			String rate = rs_movie.getString("rate");
+			Movie temp = new Movie(id, title, info, director, genre, url, reservation_rate, rate);
 			movie_list.add(temp);
 		}
 		return movie_list;
@@ -69,7 +72,10 @@ public class get_db {
 			String info = rs_movie.getString("info");
 			String director = rs_movie.getString("director");
 			String genre = rs_movie.getString("genre");
-			Movie temp = new Movie(id, title, info, director, genre);
+			String url = rs_movie.getString("url");
+			String reservation_rate = rs_movie.getString("reservation_rate");
+			String rate = rs_movie.getString("rate");
+			Movie temp = new Movie(id, title, info, director, genre, url, reservation_rate, rate);
 			movie_list.add(temp);
 		}
 
@@ -79,7 +85,10 @@ public class get_db {
 			String info = "";
 			String director = "";
 			String genre = "";
-			Movie temp = new Movie(id, title, info, director, genre);
+			String url = "";
+			String reservation_rate = "";
+			String rate = "";
+			Movie temp =new Movie(id, title, info, director, genre, url, reservation_rate, rate);
 			movie_list.add(temp);
 		}
 		return movie_list;

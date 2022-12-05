@@ -47,7 +47,7 @@
 								</div>
 							</div>
 						</div>
-						<img class="icon" alt="" src="web_project/public/-2@2x.png" />
+						<img class="icon" alt="" src="${movie.url}" />
 					</div>
 					<div class="div13">
 						<b class="b">TGV</b>

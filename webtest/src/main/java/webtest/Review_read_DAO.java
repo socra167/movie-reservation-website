@@ -17,7 +17,7 @@ public class Review_read_DAO {
 	public void open() {
 		try {
 			Class.forName(JDBC_DRIVER);
-			conn = DriverManager.getConnection(JDBC_URL, "root", "1234");
+			conn = DriverManager.getConnection(JDBC_URL, "root", "qhw12522");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
