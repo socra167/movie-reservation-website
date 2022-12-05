@@ -13,15 +13,18 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- tgv_db.movie definition
+
 CREATE TABLE `movie` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `title` varchar(32) CHARACTER SET utf8mb3 NOT NULL,
-  `info` varchar(100) CHARACTER SET utf8mb3 DEFAULT NULL,
-  `director` varchar(32) CHARACTER SET utf8mb3 NOT NULL,
+  `title` varchar(32) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `info` varchar(500) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
+  `director` varchar(32) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   `genre` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `url` varchar(100) DEFAULT NULL,
+  `reservation_rate` varchar(100) DEFAULT NULL,
+  `rate` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 -- tgv_db.review definition
 CREATE TABLE `review` (
   `id` int NOT NULL AUTO_INCREMENT,
