@@ -52,7 +52,7 @@
             <div class="formform-groupbasicdefault-div1">
               <div class="group-label-div">Password</div>
               <div class="forminputtextdefault-div">
-                <input type="text" class="inputbase-div" placeholder="Input Password" name = "password"></input> 
+                <input type="password" class="inputbase-div" placeholder="Input Password" name = "password"></input> 
               </div>
             </div>
 
@@ -71,6 +71,12 @@
     </div>
 
     <script>
+    var check = '${check}'
+    
+    if (check == 'f'){
+    	alert("Already Exist ID");
+    }
+    
       var dropdownitemContainer = document.getElementById("dropdownitemContainer");
       if (dropdownitemContainer) {
         dropdownitemContainer.addEventListener("click", function (e) {

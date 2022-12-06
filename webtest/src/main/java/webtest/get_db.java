@@ -24,7 +24,7 @@ public class get_db {
 	public get_db() throws SQLException {
 		final String USERNAME = "root";// DBMS접속 시 아이디
 		final String URL = "jdbc:mysql://localhost:3306/tgv_db";// DBMS접속할 db명
-		final String PASSWORD = "qhw12522";// DBMS접속 시 비밀번호
+		final String PASSWORD = "1234";// DBMS접속 시 비밀번호
 		try {
 			System.out.println("생성자");
 			Class.forName("com.mysql.jdbc.Driver");
@@ -88,7 +88,7 @@ public class get_db {
 			String url = "";
 			String reservation_rate = "";
 			String rate = "";
-			Movie temp =new Movie(id, title, info, director, genre, url, reservation_rate, rate);
+			Movie temp = new Movie(id, title, info, director, genre, url, reservation_rate, rate);
 			movie_list.add(temp);
 		}
 		return movie_list;
@@ -179,7 +179,7 @@ public class get_db {
 			}
 
 			while (review_list.size() < 1) {
-				int id = 5;
+				int id = -1;
 				String title = "검색 결과가 없습니다.";
 				String content = "";
 				String create_date = "";
@@ -219,17 +219,19 @@ public class get_db {
 		return user_list;
 	}
 
-	public void Update_User(String new_id, String new_password, String username) throws SQLException {
+	public int Update_User(String new_id, String new_password, String username) throws SQLException {
 		String sql = "INSERT INTO user (site_id, password, user_name) VALUES (?,?,?)";
+		int i = 0;
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, new_id);
 			pstmt.setString(2, new_password);
 			pstmt.setString(3, username);
-			pstmt.executeUpdate();
+			i = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		return i;
 	}
 
 	public int find_uid(String user_id) throws SQLException {

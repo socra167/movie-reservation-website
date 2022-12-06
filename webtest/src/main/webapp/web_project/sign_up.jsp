@@ -32,7 +32,7 @@
   <body>
     <form action = "/webtest/Sign_Up" class="mainpage-sign-up-div" id="MainPage-SignUp" method = "post">
       <div class="mainbox-div"></div>
-      <img class="tgv-logo-icon12" alt="" src="public/tgv-logo@2x.png" />
+      <img class="tgv-logo-icon12" alt="" src="public/tgv-logo@2x.png"/>
       <div class="card-backgroundsimple-div1"></div>
       <div class="group-label-div2">ID</div>
       <div class="forminputtextdefault-div2">
@@ -41,14 +41,14 @@
       <div class="group-label-div3">Password</div>
       <div class="group-label-div4">Password Check</div>
       <div class="forminputtextdefault-div3">
-        <input id="first-Password" class="inputbase-div2" placeholder="Input Password" type="text" name = "new_password"></input>
+        <input id="first-Password" class="inputbase-div2" placeholder="Input Password" type="password" name = "new_password"></input>
         
       </div>
       <div class="forminputtextdefault-div4">
-        <input id="check-Password" class="inputbase-div2" placeholder="Password Check" type="text"></input>
+        <input id="check-Password" class="inputbase-div2" placeholder="Password Check" type="password"></input>
       </div>
       <!-- <div class="base-div"></div> -->
-      <button type = "submit" class="sign-up-div" id="signUpText" onclick="checkPassword(); checkID(['123','23']);">Sign up</button>
+      <button type="button" class="sign-up-div" id="signUpText" onclick="checkPassword();">Sign up</button>
       <div class="div288">
         <b class="tgv-b16">TGV</b>
         <div class="tu-golden-village12">TU Golden Village</div>
@@ -67,9 +67,10 @@
           checkPassword == '' 
         ){
           alert('check Your Password');
-          window.location.href = "./main-page-sign-up.html";
+          window.location.href = "/webtest/Loginservlet";
         }
         else {
+        	document.getElementById("MainPage-SignUp").submit();
           return true
         }
       }
@@ -85,7 +86,7 @@
           return false
         } else{
           alert('Success');
-          window.location.href = "./index.html";
+          window.location.href = "/webtest/Loginservlet";
           return true
         }
       }

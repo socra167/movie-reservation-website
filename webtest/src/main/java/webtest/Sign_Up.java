@@ -45,15 +45,20 @@ public class Sign_Up extends HttpServlet {
 			e.printStackTrace();
 		}
 		try {
-			Data.Update_User(username, password, username);
-			System.out.print("성공");
+			int success = Data.Update_User(username, password, username);
+			System.out.print("성공 : login");
+			if (success == 0) {
+				request.setAttribute("check","f");
+//				System.out.println(success);
+				getServletContext().getRequestDispatcher("/Loginservlet").forward(request, response);
+				return;
+			}
 		} catch (SQLException e) {
 			System.out.println("실패");
 			// TODO Auto-generated catch block	
 			e.printStackTrace();
 		}
-		response.sendRedirect("/webtest/Loginservlet");
-		
+		getServletContext().getRequestDispatcher("/Loginservlet").forward(request, response);
 	}
 
 }

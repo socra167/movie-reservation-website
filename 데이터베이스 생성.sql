@@ -25,6 +25,7 @@ CREATE TABLE `movie` (
   `rate` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
 -- tgv_db.review definition
 CREATE TABLE `review` (
   `id` int NOT NULL AUTO_INCREMENT,

@@ -20,7 +20,7 @@ public class SeatDAO {
 	public void open() {
 		try {
 			Class.forName(JDBC_DRIVER);
-			conn = DriverManager.getConnection(JDBC_URL, "root", "qhw12522");
+			conn = DriverManager.getConnection(JDBC_URL, "root", "1234");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

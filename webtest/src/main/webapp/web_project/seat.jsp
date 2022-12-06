@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
+<%@ taglib prefix="myprefix" uri="/WEB-INF/tld/message.tld"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,6 +21,7 @@
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 </head>
 <body>
+
 	<div class="seat-div">
 		<div class="div">
 			<div class="div1">
@@ -41,7 +43,7 @@
 							<div class="div8">
 								<div class="b">장르: ${movie.genre}</div>
 								<div class="div10">감독: ${movie.director}</div>
-								<div class="div11">시놉시스: </div>
+								<div class="div11"></div>
 								<div class="div12">
 									<p class="p" style="font-size: 15px">${movie.info}</p>
 								</div>
@@ -55,11 +57,11 @@
 				</div>
 				<div class="div14">
 					<div class="div15">
-						<div class="div16">11월</div>
+						<div class="div16"><myprefix:MyMsg/></div>
 						<div class="div17">
 							<div class="div18">
-								<b class="b1">21</b><b class="b2">23</b><b class="b3">22</b><b
-									class="b4">24</b><b class="b5">25</b><b class="div10">26</b>
+								<b class="b1">05</b><b class="b2">06</b><b class="b3">07</b><b
+									class="b4">08</b><b class="b5">09</b><b class="div10">10</b>
 							</div>
 							<div class="iconnavigationchevron-right-div">
 								<img class="color-icon" alt=""
@@ -75,7 +77,7 @@
 						<div class="div21" id="reserve-0" onclick="OpenModal(0)">
 							<div class="div22">
 								<div class="div23">
-									<span>003 </span><span class="span">/ 036</span>
+									<span>000 </span><span class="span">/ 036</span>
 								</div>
 								<div class="div24">
 									<b class="b">09:20</b>
@@ -85,80 +87,80 @@
 						<div class="div25" id="reserve-1" onclick="OpenModal(1)">
 							<div class="div22">
 								<div class="div23">
-									<span>003 </span><span class="span">/ 036</span>
+									<span>000 </span><span class="span">/ 036</span>
 								</div>
 								<div class="div24">
-									<b class="b">09:20</b>
+									<b class="b">10:20</b>
 								</div>
 							</div>
 						</div>
 						<div class="div29" id="reserve-2" onclick="OpenModal(2)">
 							<div class="div30">
 								<div class="div23">
-									<span>003 </span><span class="span">/ 036</span>
+									<span>000 </span><span class="span">/ 036</span>
 								</div>
 								<div class="div24">
-									<b class="b">09:20</b>
+									<b class="b">11:20</b>
 								</div>
 							</div>
 						</div>
 						<div class="div33" id="reserve-8" onclick="OpenModal(8)">
 							<div class="div34">
 								<div class="div23">
-									<span>003 </span><span class="span">/ 036</span>
+									<span>000 </span><span class="span">/ 036</span>
 								</div>
 								<div class="div24">
-									<b class="b">09:20</b>
+									<b class="b">12:20</b>
 								</div>
 							</div>
 						</div>
 						<div class="div37" id="reserve-5" onclick="OpenModal(5)">
 							<div class="div34">
 								<div class="div23">
-									<span>003 </span><span class="span">/ 036</span>
+									<span>000 </span><span class="span">/ 036</span>
 								</div>
 								<div class="div24">
-									<b class="b">09:20</b>
+									<b class="b">13:20</b>
 								</div>
 							</div>
 						</div>
 						<div class="div41" id="reserve-7" onclick="OpenModal(7)">
 							<div class="div34">
 								<div class="div23">
-									<span>003 </span><span class="span">/ 036</span>
+									<span>000 </span><span class="span">/ 036</span>
 								</div>
 								<div class="div24">
-									<b class="b">09:20</b>
+									<b class="b">14:20</b>
 								</div>
 							</div>
 						</div>
 						<div class="div45" id="reserve-4" onclick="OpenModal(4)">
 							<div class="div34">
 								<div class="div23">
-									<span>003 </span><span class="span">/ 036</span>
+									<span>000 </span><span class="span">/ 036</span>
 								</div>
 								<div class="div24">
-									<b class="b">09:20</b>
+									<b class="b">15:20</b>
 								</div>
 							</div>
 						</div>
 						<div class="div49" id="reserve-6" onclick="OpenModal(6)">
 							<div class="div50">
 								<div class="div23">
-									<span>003 </span><span class="span">/ 036</span>
+									<span>000 </span><span class="span">/ 036</span>
 								</div>
 								<div class="div24">
-									<b class="b">09:20</b>
+									<b class="b">16:20</b>
 								</div>
 							</div>
 						</div>
 						<div class="div53" id="reserve-3" onclick="OpenModal(3)">
 							<div class="div50">
 								<div class="div23">
-									<span>003 </span><span class="span">/ 036</span>
+									<span>000 </span><span class="span">/ 036</span>
 								</div>
 								<div class="div24">
-									<b class="b">09:20</b>
+									<b class="b">17:20</b>
 								</div>
 							</div>
 						</div>
@@ -181,7 +183,7 @@
 					<b class="seat-b">Seat</b>
 					<div class="div63">
 						<div class="div10">
-							<span>003</span><span class="span9"> / 036</span>
+							<span>000</span><span class="span9"> / 036</span>
 						</div>
 						<div class="div65">0인</div>
 					</div>
@@ -268,7 +270,7 @@
 					<b class="seat-b">Seat</b>
 					<div class="div63">
 						<div class="div10">
-							<span>003</span><span class="span9"> / 036</span>
+							<span>000</span><span class="span9"> / 036</span>
 						</div>
 						<div class="div65">0인</div>
 					</div>
@@ -355,7 +357,7 @@
 					<b class="seat-b">Seat</b>
 					<div class="div63">
 						<div class="div10">
-							<span>003</span><span class="span9"> / 036</span>
+							<span>000</span><span class="span9"> / 036</span>
 						</div>
 						<div class="div65">0인</div>
 					</div>
@@ -442,7 +444,7 @@
 					<b class="seat-b">Seat</b>
 					<div class="div63">
 						<div class="div10">
-							<span>003</span><span class="span9"> / 036</span>
+							<span>000</span><span class="span9"> / 036</span>
 						</div>
 						<div class="div65">0인</div>
 					</div>
@@ -529,7 +531,7 @@
 					<b class="seat-b">Seat</b>
 					<div class="div63">
 						<div class="div10">
-							<span>003</span><span class="span9"> / 036</span>
+							<span>000</span><span class="span9"> / 036</span>
 						</div>
 						<div class="div65">0인</div>
 					</div>
@@ -616,7 +618,7 @@
 					<b class="seat-b">Seat</b>
 					<div class="div63">
 						<div class="div10">
-							<span>003</span><span class="span9"> / 036</span>
+							<span>000</span><span class="span9"> / 036</span>
 						</div>
 						<div class="div65">0인</div>
 					</div>
@@ -703,7 +705,7 @@
 					<b class="seat-b">Seat</b>
 					<div class="div63">
 						<div class="div10">
-							<span>003</span><span class="span9"> / 036</span>
+							<span>000</span><span class="span9"> / 036</span>
 						</div>
 						<div class="div65">0인</div>
 					</div>
@@ -790,7 +792,7 @@
 					<b class="seat-b">Seat</b>
 					<div class="div63">
 						<div class="div10">
-							<span>003</span><span class="span9"> / 036</span>
+							<span>000</span><span class="span9"> / 036</span>
 						</div>
 						<div class="div65">0인</div>
 					</div>
@@ -877,7 +879,7 @@
 					<b class="seat-b">Seat</b>
 					<div class="div63">
 						<div class="div10">
-							<span>003</span><span class="span9"> / 036</span>
+							<span>000</span><span class="span9"> / 036</span>
 						</div>
 						<div class="div65">0인</div>
 					</div>
@@ -1053,7 +1055,12 @@
       };
 
       if (QuerySeat.length > 0) {
+    	  
         for (let i = 0; i < QuerySeat.length; i++) {
+        	 let id2 = document.getElementById(`reserve-\${i}`);
+             let current2 = Number(
+                     id2.children[0].children[0].children[0].innerHTML
+                   );
           for (let j = 0; j < QuerySeat[i].childElementCount; j++) {
             for (
               let k = 0;
@@ -1069,6 +1076,10 @@
               } else if (seat[i][mappingObject[j]][k] == 2) {
                 QuerySeat[i].children[j].children[k].style.cssText =
                   "border: none; background-color: var(--color-black);";
+               current2 += 1
+                id2.children[0].children[0].children[0].innerHTML = `\${String(
+                 current2
+).padStart(3, "0")} `;
               }
               QuerySeat[i].children[j].children[k].addEventListener(
                 "click",
@@ -1079,6 +1090,7 @@
                   beforeSeat_I = i;
                 }
               );
+              
             }
           }
         }

@@ -34,13 +34,13 @@
 					<b class="tgv-b2">TGV</b>
 					<div class="tu-golden-village2">TU Golden Village</div>
 				</div>
-				<div class="div33">
+				<div class="div33" onclick="click33()">
 					<div class="logout-div2">Logout</div>
 				</div>
 			</div>
 			<div class="div34">
 				<div class="div35">
-					<div class="div36">
+					<div class="div36" onclick="click36()">
 						<div class="div37">글쓰기</div>
 						<div class="iconcontentcreate-24px-div2">
 							<img class="color-icon6" alt=""
@@ -59,23 +59,23 @@
 						</div>
 						<div class="div43">
 							<c:forEach var="feature" items="${list}" varStatus="status">
-								<%-- <c:if text="${10 > status.count }"> --%>
-								<div class="div${status.count+43}" onclick=read(
-									"${feature.id}")>
-									<b class="b7" onclick=read("${feature.id}")>${feature.getTitle()}
-									</b><b class="b8" onclick=read("${feature.id}")>${feature.getMovie_name()}</b><b
-										class="b9" onclick=read("${feature.id}")>${feature.getCategory()}</b><b
-										class="user1-b" onclick=read("${feature.id}")>${feature.getUserName()}</b><b
-										class="b10" onclick=read("${feature.id}")>${feature.getCreate_date()}</b><b
-										class="no-b" onclick=read("${feature.id}")>${status.count}</b>
-								</div>
-								<%-- </c:if> --%>
+								<c:if test="${10 > status.count}">
+									<div class="div${status.count+43}" onclick=read(
+										"${feature.id}")>
+										<b class="b7" onclick=read("${feature.id}")>${feature.getTitle()}
+										</b><b class="b8" onclick=read("${feature.id}")>${feature.getMovie_name()}</b><b
+											class="b9" onclick=read("${feature.id}")>${feature.getCategory()}</b><b
+											class="user1-b" onclick=read("${feature.id}")>${feature.getUserName()}</b><b
+											class="b10" onclick=read("${feature.id}")>${feature.getCreate_date()}</b><b
+											class="no-b" onclick=read("${feature.id}")>${status.count}</b>
+									</div>
+								</c:if>
 							</c:forEach>
 						</div>
 					</div>
 				</div>
 				<div class="div53">
-					<div class="div54">
+					<div class="div54" onclick="click54()">
 						<b class="b52"><span>영화</span><span class="span"> | 리뷰</span></b>
 					</div>
 					<form action="/webtest/Review_page" id="form">
@@ -94,27 +94,47 @@
 	</div>
 
 	<script>
-      var next = document.querySelector(".div36");
-      if (next) {
-        next.addEventListener("click", function (e) {
+	var check = "${list.get(0).getTitle()}"
+	console.log(check);
+	if (check != "검색 결과가 없습니다."){
+		var checkEL = document.querySelector("div${status.count+43}")
+		for (let i =0; i<checkEL.childElementCount; i++){
+			checkEL[i].addEventListener('click', () => {
+				checkEL[i].remove();
+			});
+		}
+	}/*
+      var next1 = document.querySelector(".div36");
+      if (next1) {
+        next1.addEventListener("click", function (e) {
           window.location.href = "/webtest/writeControl";
         });
       }
-
-      var next = document.querySelector(".div54");
-      if (next) {
-        next.addEventListener("click", function (e) {
+      var next2 = document.querySelector(".div54");
+      if (next2) {
+        next2.addEventListener("click", function (e) {
           window.location.href = "/webtest/Movie_page";
         });
       }
-      var next = document.querySelector(".div33");
-      if (next) {
-        next.addEventListener("click", function (e) {
+      var next3 = document.querySelector(".div33");
+      if (next3) {
+        next3.addEventListener("click", function (e) {
           window.location.href = "/webtest/Logout";
         });
-      }
+      }*/
     function read(id){
+    	if (id != -1){
        window.location.href = `readControl?id=`+id;
+    	}
+    }
+    function click36(){
+    	window.location.href = "/webtest/writeControl";
+    }
+	function click54(){
+		window.location.href = "/webtest/Movie_page";
+    }
+	function click33(){
+		window.location.href = "/webtest/Logout";
     }
     </script>
 </body>
